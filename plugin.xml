@@ -33,7 +33,11 @@
                 <param name="ios-package" value="ApiAIPlugin" />
             </feature>
         </config-file>
-
+            
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+            <string>This app requires microphone access to record audio.</string>
+        </config-file>
+            
         <header-file src="src/ios/ApiAIPlugin.h" compiler-flags="-std=gnu99 -fmodules" />
         <source-file src="src/ios/ApiAIPlugin.m" compiler-flags="-std=gnu99 -fmodules" />
 
